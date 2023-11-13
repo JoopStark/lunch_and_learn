@@ -34,7 +34,6 @@ describe PlaceService do
 
         tourism = @service.tourism([12.1, -68.92])
 
-        binding.pry
         expect(tourism).to be_a Hash
         # expect(restaurants[:type]).to be_a String
       end

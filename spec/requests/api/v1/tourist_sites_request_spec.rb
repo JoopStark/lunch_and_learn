@@ -65,7 +65,7 @@ describe "Request tourist spot request" do
   end
 
   it "(sad path)sends a list of tourist spots Antarctica", :vcr do
-   make_api_request
+  #  make_api_request
     
     get '/api/v1/tourist_sites?country=Antarctica'
 
