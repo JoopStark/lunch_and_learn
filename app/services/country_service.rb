@@ -11,7 +11,8 @@ class CountryService < ApplicationService
   end
   
   def capitol_location(country)
-    country_data= json_parse(conn.get("/v3.1/name/#{country}"))
+    format_country = country.gsub(" ", "%20")
+    country_data= json_parse(conn.get("/v3.1/name/#{format_country}"))
 
     # binding.pry
     country_data[0]&.[](:capitalInfo)&.[](:latlng)
