@@ -23,5 +23,15 @@ describe CountryService do
         expect(country).to be_a String
       end
     end
+
+    describe '#capitol_location' do
+      it 'returns location of capitol', :vcr do
+        make_api_request
+
+        capitol = @country.capitol_location("Latvia")
+
+        expect(capitol).to be_a Array
+      end
+    end
   end
 end

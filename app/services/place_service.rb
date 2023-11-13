@@ -16,11 +16,12 @@ class PlaceService < ApplicationService
   #   )
   # end
 
-  def test
+  def tourism(latlng)
       json_parse(
         conn.get("/v2/places") do |req|
-          req.params['categories'] = 'catering.restaurant'
-          req.params['filter'] = 'rect:-73.99331143343392,40.77129742280923,-73.97215311088917,40.757134681430635'
+          req.params['categories'] = 'tourism.sights'
+          # req.params['filter'] = 'rect:-73.99331143343392,40.77129742280923,-73.97215311088917,40.757134681430635'
+          req.params['filter'] = "circle:#{latlng[1]},#{latlng[0]},1000"
         end
     )
   end

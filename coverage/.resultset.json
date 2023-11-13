@@ -1,33 +1,71 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/spec/services/country_service_spec.rb": {
+      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/spec/requests/api/v1/tourist_sites_request_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          2,
-          null,
-          null,
-          1,
-          1,
-          1,
           1,
           null,
-          null,
-          null,
-          null,
           1,
-          1,
-          1,
-          null,
           null,
           1,
           null,
           1,
           null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
           null,
           null
         ]
@@ -218,8 +256,32 @@
           1,
           1,
           1,
+          1,
           null,
           null,
+          null
+        ]
+      },
+      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/controllers/api/v1/tourist_sites_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          16,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
           null
         ]
       },
@@ -228,14 +290,21 @@
           1,
           null,
           1,
-          2,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
           null,
           null,
           1,
           1,
-          1,
+          null,
           null,
           1,
+          null,
           null,
           null
         ]
@@ -244,12 +313,57 @@
         "lines": [
           1,
           1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/services/place_service.rb": {
+        "lines": [
           1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/poros/tourism.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          16,
+          16,
+          16,
+          16,
           null,
           null
         ]
       }
     },
-    "timestamp": 1699890602
+    "timestamp": 1699896023
   }
 }
