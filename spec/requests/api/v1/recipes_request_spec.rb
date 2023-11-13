@@ -21,7 +21,7 @@ describe "Request recipes" do
   end
 
   it "sends a list of recipes from random country if no country submitted", :vcr do
-    # make_api_request
+    make_api_request
 
     get '/api/v1/recipes'
 
