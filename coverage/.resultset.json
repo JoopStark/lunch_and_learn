@@ -1,30 +1,25 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/spec/requests/api/v1/recipes_request_spec.rb": {
+      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/spec/services/country_service_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
+          2,
           null,
           null,
           1,
-          null,
+          1,
+          1,
           1,
           null,
+          null,
+          null,
+          null,
           1,
-          null,
           1,
-          20,
-          20,
-          20,
-          20,
-          20,
-          20,
-          null,
-          null,
-          null,
           1,
           null,
           null,
@@ -32,40 +27,7 @@
           null,
           1,
           null,
-          1,
           null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
           null,
           null
         ]
@@ -261,47 +223,19 @@
           null
         ]
       },
-      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/controllers/api/v1/recipes_controller.rb": {
-        "lines": [
-          1,
-          1,
-          4,
-          3,
-          null,
-          1,
-          null,
-          null,
-          4,
-          20,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/services/recipe_service.rb": {
+      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/services/country_service.rb": {
         "lines": [
           1,
           null,
           1,
-          4,
-          4,
-          4,
-          4,
-          null,
+          2,
           null,
           null,
           1,
-          4,
+          1,
+          1,
           null,
-          4,
-          null,
-          null,
+          1,
           null,
           null
         ]
@@ -310,51 +244,12 @@
         "lines": [
           1,
           1,
-          5,
-          null,
-          null
-        ]
-      },
-      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/serializers/recipe_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/poros/recipe.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          20,
-          20,
-          20,
-          20,
-          20,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/joop_stark/turing_work/3mod/projects/lunch_and_learn/backend/app/services/country_service.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
           1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1699850392
+    "timestamp": 1699890602
   }
 }
