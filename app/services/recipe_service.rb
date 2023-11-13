@@ -8,7 +8,7 @@ class RecipeService < ApplicationService
     end
   end
 
-  def recipes_by_country(country)
+  def recipes(country)
     json_parse(
       conn.get("/api/recipes/v2") do |req|
         req.params['q'] = country

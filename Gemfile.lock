@@ -72,6 +72,7 @@ GEM
     bootsnap (1.17.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    coderay (1.1.3)
     concurrent-ruby (1.2.2)
     crack (0.4.5)
       rexml
@@ -132,6 +133,9 @@ GEM
     nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
     pg (1.5.4)
+    pry (0.14.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     psych (5.1.1.1)
       stringio
     public_suffix (5.0.3)
@@ -227,6 +231,7 @@ DEPENDENCIES
   faraday
   jsonapi-serializer
   pg (~> 1.1)
+  pry
   puma (~> 5.0)
   rails (~> 7.0.8)
   rspec-rails

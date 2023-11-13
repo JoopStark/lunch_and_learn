@@ -16,13 +16,9 @@ describe RecipeService do
   context 'class methods' do
     describe '#recipes' do
       it 'returns recipes details by country', :vcr do
+        # make_api_request
 
-          WebMock.allow_net_connect! 
-          WebMock.disable! 
-          VCR.eject_cassette 
-          VCR.turn_off!(:ignore_cassettes => true)
-
-        search = @service.recipes_by_country('germany')
+        search = @service.recipes('germany')
 
         expect(search).to be_a Hash
 

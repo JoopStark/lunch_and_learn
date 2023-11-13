@@ -99,3 +99,10 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+def make_api_request
+    WebMock.allow_net_connect! 
+    WebMock.disable! 
+    VCR.eject_cassette 
+    VCR.turn_off!(:ignore_cassettes => true)
+end
