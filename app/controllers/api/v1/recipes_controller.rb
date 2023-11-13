@@ -12,5 +12,6 @@ class Api::V1::RecipesController < ApplicationController
     render json: RecipeSerializer.new(raw_recipes[:hits].map do |recipe|
                                         Recipe.new(recipe, params[:country])
                                       end)
+    
   end
 end
