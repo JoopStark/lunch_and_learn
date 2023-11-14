@@ -54,4 +54,21 @@ describe "User requests" do
     expect(response.status).to eq(409)
     expect(response.body).to eq("[\"name can't be blank\",\"password_confirmation doesn't match Password\"]")
   end
+
+  it "users cannot create accounts without unique email" do
+    User.create!( name: "Jason", email: 'dave@aol.com', password: 'Password12?')
+
+    user_params = ({
+                    name: "Dave",
+                    email: 'dave@aol.com',
+                    password: 'Password12?',
+                    password_confirmation: 'Password12?'
+                  })
+    headers = {"CONTENT_TYPE" => "application/json"}
+
+    post "/api/v1/users", headers: headers, params: JSON.generate(user_params)
+
+    expect(response.status).to eq(409)
+    expect(response.body).to eq("[\"email has already been taken\"]")
+  end
 end
