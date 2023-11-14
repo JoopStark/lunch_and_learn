@@ -5,14 +5,9 @@ class ErrorSerializer
    end
 
    def serialize_json
-      {
-        errors: [
-          {
-            status: @error_object.status.to_s,
-            title: @error_object.message
-          }
-        ]
-      }
+      @error_object.map do |key, value|
+        key.to_s << " " << value[0]
+      end
    end
 
 end
