@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :recipes, only: :index
       resources :tourist_sites, only: :index
       resources :learning_resources, only: :index
+      resources :users, only: :create
     end
   end
 end
