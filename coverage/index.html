@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-11-14T11:53:40-07:00">2023-11-14T11:53:40-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-11-14T14:32:55-07:00">2023-11-14T14:32:55-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  96.43%
+  98.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.04
+         1.09
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>140</b> relevant lines,
-    <span class="green"><b>135</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed. </span>
+    <b>150</b> relevant lines,
+    <span class="green"><b>147</b> lines covered</span> and
+    <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
-  96.43%
+  98.0%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d557f77219b35267666aefcd990dcc5524fb388a" class="src_link" title="app/controllers/api/v1/favorites_controller.rb">app/controllers/api/v1/favorites_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">93.75 %</td>
-            <td class="cell--number">31</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">1.44</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.60</td>
             
           </tr>
         
@@ -94,12 +94,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#e5a5c9d520c1a2d4475bed474865c94a19134de7" class="src_link" title="app/facades/favorite_facade.rb">app/facades/favorite_facade.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">83.33 %</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">0.83</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">31</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.59</td>
             
           </tr>
         
@@ -132,7 +132,7 @@
             <td class="cell--number">12</td>
             <td class="cell--number">9</td>
             <td class="cell--number">3</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.08</td>
             
           </tr>
         
@@ -238,9 +238,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#fa9efcd160f5d6328e0cbf6cc0eb170c854389cc" class="src_link" title="spec/requests/api/v1/favorites_request_spec.rb">spec/requests/api/v1/favorites_request_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">89</td>
-            <td class="cell--number">45</td>
-            <td class="cell--number">45</td>
+            <td class="cell--number">107</td>
+            <td class="cell--number">55</td>
+            <td class="cell--number">55</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -268,7 +268,7 @@
     <h3>app/controllers/api/v1/favorites_controller.rb</h3>
     <h4>
       <span class="green">
-  93.75%
+  100.0%
 </span>
 
       lines covered
@@ -277,9 +277,9 @@
     
 
     <div class="t-line-summary">
-      <b>16</b> relevant lines.
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>5</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -318,18 +318,18 @@
 
             
 
-            <code class="ruby">    user = User.find_by(api_key: params[:api_key])</code>
+            <code class="ruby">    render FavoriteFacade.create(params)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="4">
-            <span class="hits">3</span>
+          <li class="never" data-hits="" data-linenumber="4">
+            
             
 
             
 
-            <code class="ruby">    favorite = Favorite.create(user: user, country: params[:country], recipe_link: params[:recipe_link], recipe_title: params[:recipe_title])</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -345,84 +345,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="6">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    if favorite.save</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      render json: {success: &quot;Favorite added successfully&quot;}, status: :created</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">    else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="9">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      render json: error_response(favorite.errors) , status: 409</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
@@ -433,19 +356,8 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">    # render json: FavoriteFacade.index(params[:api_key])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="7">
+            <span class="hits">2</span>
             
 
             
@@ -455,7 +367,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -466,161 +378,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  private</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def favorite_params</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="21">
-            
-            
-
-            
-
-            <code class="ruby">    params.permit(:country, :recipe_link, :recipe_title) </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="23">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def error_response(errors)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="25">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    if errors.messages.keys.include? (:user)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      {errors: &quot;invalid API key&quot;}</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby">    else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      {errors: &quot;missing data&quot;}</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -692,8 +450,8 @@
   <div class="header">
     <h3>app/facades/favorite_facade.rb</h3>
     <h4>
-      <span class="yellow">
-  83.33%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -702,9 +460,9 @@
     
 
     <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>17</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -737,8 +495,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="3">
+            <span class="hits">2</span>
             
 
             
@@ -748,8 +506,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="4">
+            <span class="hits">2</span>
             
 
             
@@ -781,8 +539,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="7">
-            
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
             
@@ -815,6 +573,237 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.create(params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="12">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    user = User.find_by(api_key: params[:api_key])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="13">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    favorite = Favorite.create(user: user, country: params[:country], recipe_link: params[:recipe_link], recipe_title: params[:recipe_title])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="15">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    if favorite.save</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      {json: {success: &quot;Favorite added successfully&quot;}, status: :created}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="18">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      {json: error_response(favorite.errors) , status: 409}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.error_response(errors)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="25">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    if errors.messages.keys.include? (:user)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      {errors: &quot;invalid API key&quot;}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      {errors: &quot;missing data&quot;}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -1138,8 +1127,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="11">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="11">
+            <span class="hits">5</span>
             
 
             
@@ -3393,8 +3382,8 @@
     
 
     <div class="t-line-summary">
-      <b>45</b> relevant lines.
-      <span class="green"><b>45</b> lines covered</span> and
+      <b>55</b> relevant lines.
+      <span class="green"><b>55</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3434,7 +3423,7 @@
 
             
 
-            <code class="ruby">describe &quot;Favoritess requests&quot; do</code>
+            <code class="ruby">describe &quot;Favorites requests&quot; do</code>
           </li>
         </div>
       
@@ -3445,7 +3434,7 @@
 
             
 
-            <code class="ruby">  it &quot;users can create favorite&quot; do</code>
+            <code class="ruby">  describe &quot;favorites#create&quot; do</code>
           </li>
         </div>
       
@@ -3456,18 +3445,18 @@
 
             
 
-            <code class="ruby">    user = User.create!( name: &quot;Jason&quot;, email: &#39;dave@aol.com&#39;, password: &#39;Password12?&#39;, api_key: &#39;111222333&#39;)</code>
+            <code class="ruby">    it &quot;users can create favorite&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      user = User.create!( name: &quot;Jason&quot;, email: &#39;dave@aol.com&#39;, password: &#39;Password12?&#39;, api_key: &#39;111222333&#39;)</code>
           </li>
         </div>
       
@@ -3478,29 +3467,29 @@
 
             
 
-            <code class="ruby">    favorite_params = ({</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">      favorite_params = ({</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      api_key: &quot;111222333&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">      country: &quot;thailand&quot;,</code>
+            <code class="ruby">        api_key: &quot;111222333&quot;,</code>
           </li>
         </div>
       
@@ -3511,7 +3500,7 @@
 
             
 
-            <code class="ruby">      recipe_link: &quot;https://www.tastingtable.com/food&quot;,</code>
+            <code class="ruby">        country: &quot;thailand&quot;,</code>
           </li>
         </div>
       
@@ -3522,7 +3511,7 @@
 
             
 
-            <code class="ruby">      recipe_title: &quot;Crab Fried Rice (Khaao Pad Bpu)&quot;</code>
+            <code class="ruby">        recipe_link: &quot;https://www.tastingtable.com/food&quot;,</code>
           </li>
         </div>
       
@@ -3533,7 +3522,7 @@
 
             
 
-            <code class="ruby">    })</code>
+            <code class="ruby">        recipe_title: &quot;Crab Fried Rice (Khaao Pad Bpu)&quot;</code>
           </li>
         </div>
       
@@ -3544,23 +3533,12 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      })</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    headers = {&quot;CONTENT_TYPE&quot; =&gt; &quot;application/json&quot;}</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -3571,18 +3549,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
+          <li class="covered" data-hits="1" data-linenumber="15">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    post &quot;/api/v1/favorites&quot;, headers: headers, params: JSON.generate(favorite_params)</code>
+            <code class="ruby">      headers = {&quot;CONTENT_TYPE&quot; =&gt; &quot;application/json&quot;}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -3593,13 +3571,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
+          <li class="covered" data-hits="1" data-linenumber="17">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    created_favorite = Favorite.last</code>
+            <code class="ruby">      post &quot;/api/v1/favorites&quot;, headers: headers, params: JSON.generate(favorite_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3610,7 +3599,7 @@
 
             
 
-            <code class="ruby">    expect(response).to be_successful</code>
+            <code class="ruby">      created_favorite = Favorite.last</code>
           </li>
         </div>
       
@@ -3621,7 +3610,7 @@
 
             
 
-            <code class="ruby">    expect(created_favorite.country).to eq(favorite_params[:country])</code>
+            <code class="ruby">      expect(response).to be_successful</code>
           </li>
         </div>
       
@@ -3632,7 +3621,7 @@
 
             
 
-            <code class="ruby">    expect(created_favorite.recipe_link).to eq(favorite_params[:recipe_link])</code>
+            <code class="ruby">      expect(created_favorite.country).to eq(favorite_params[:country])</code>
           </li>
         </div>
       
@@ -3643,12 +3632,23 @@
 
             
 
-            <code class="ruby">    expect(created_favorite.recipe_title).to eq(favorite_params[:recipe_title])</code>
+            <code class="ruby">      expect(created_favorite.recipe_link).to eq(favorite_params[:recipe_link])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(created_favorite.recipe_title).to eq(favorite_params[:recipe_title])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -3659,18 +3659,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
+          <li class="covered" data-hits="1" data-linenumber="25">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    data = JSON.parse(response.body, symbolize_names: true)</code>
+            <code class="ruby">      data = JSON.parse(response.body, symbolize_names: true)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -3681,24 +3681,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
+          <li class="covered" data-hits="1" data-linenumber="27">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(data[:success]).to eq(&quot;Favorite added successfully&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
+            <code class="ruby">      expect(data[:success]).to eq(&quot;Favorite added successfully&quot;)</code>
           </li>
         </div>
       
@@ -3709,18 +3698,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="29">
+            
             
 
             
 
-            <code class="ruby">  it &quot;users cannot create favorite with invalid API key&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3731,18 +3720,18 @@
 
             
 
-            <code class="ruby">    user = User.create!( name: &quot;Jason&quot;, email: &#39;dave@aol.com&#39;, password: &#39;Password12?&#39;, api_key: &#39;111222333&#39;)</code>
+            <code class="ruby">    it &quot;users cannot create favorite with invalid API key&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="31">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      user = User.create!( name: &quot;Jason&quot;, email: &#39;dave@aol.com&#39;, password: &#39;Password12?&#39;, api_key: &#39;111222333&#39;)</code>
           </li>
         </div>
       
@@ -3753,29 +3742,29 @@
 
             
 
-            <code class="ruby">    favorite_params = ({</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">      favorite_params = ({</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="34">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      api_key: &quot;nope&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby">      country: &quot;thailand&quot;,</code>
+            <code class="ruby">        api_key: &quot;nope&quot;,</code>
           </li>
         </div>
       
@@ -3786,7 +3775,7 @@
 
             
 
-            <code class="ruby">      recipe_link: &quot;https://www.tastingtable.com/food&quot;,</code>
+            <code class="ruby">        country: &quot;thailand&quot;,</code>
           </li>
         </div>
       
@@ -3797,7 +3786,7 @@
 
             
 
-            <code class="ruby">      recipe_title: &quot;Crab Fried Rice (Khaao Pad Bpu)&quot;</code>
+            <code class="ruby">        recipe_link: &quot;https://www.tastingtable.com/food&quot;,</code>
           </li>
         </div>
       
@@ -3808,7 +3797,7 @@
 
             
 
-            <code class="ruby">    })</code>
+            <code class="ruby">        recipe_title: &quot;Crab Fried Rice (Khaao Pad Bpu)&quot;</code>
           </li>
         </div>
       
@@ -3819,23 +3808,12 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      })</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    headers = {&quot;CONTENT_TYPE&quot; =&gt; &quot;application/json&quot;}</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -3846,18 +3824,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
+          <li class="covered" data-hits="1" data-linenumber="40">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    post &quot;/api/v1/favorites&quot;, headers: headers, params: JSON.generate(favorite_params)</code>
+            <code class="ruby">      headers = {&quot;CONTENT_TYPE&quot; =&gt; &quot;application/json&quot;}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -3868,13 +3846,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
+          <li class="covered" data-hits="1" data-linenumber="42">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(response.status).to eq(409)</code>
+            <code class="ruby">      post &quot;/api/v1/favorites&quot;, headers: headers, params: JSON.generate(favorite_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
+            
+            
+
+            
+
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3885,18 +3874,18 @@
 
             
 
-            <code class="ruby">    expect(response.body).to eq(&quot;{\&quot;errors\&quot;:\&quot;invalid API key\&quot;}&quot;)</code>
+            <code class="ruby">      expect(response.status).to eq(409)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">      expect(response.body).to eq(&quot;{\&quot;errors\&quot;:\&quot;invalid API key\&quot;}&quot;)</code>
           </li>
         </div>
       
@@ -3907,18 +3896,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="47">
+            
             
 
             
 
-            <code class="ruby">  it &quot;users cannot create favorite with invalid API key&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3929,18 +3918,18 @@
 
             
 
-            <code class="ruby">    user = User.create!( name: &quot;Jason&quot;, email: &#39;dave@aol.com&#39;, password: &#39;Password12?&#39;, api_key: &#39;111222333&#39;)</code>
+            <code class="ruby">    it &quot;users cannot create favorite with invalid API key&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    </code>
+            
+
+            <code class="ruby">      user = User.create!( name: &quot;Jason&quot;, email: &#39;dave@aol.com&#39;, password: &#39;Password12?&#39;, api_key: &#39;111222333&#39;)</code>
           </li>
         </div>
       
@@ -3951,29 +3940,29 @@
 
             
 
-            <code class="ruby">    favorite_params = ({</code>
+            <code class="ruby">      </code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
+          <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
+            <code class="ruby">      favorite_params = ({</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="52">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      api_key: &quot;111222333&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
-            
-
-            <code class="ruby">      country: &quot;thailand&quot;,</code>
+            <code class="ruby">        api_key: &quot;111222333&quot;,</code>
           </li>
         </div>
       
@@ -3984,7 +3973,7 @@
 
             
 
-            <code class="ruby">      recipe_link: &quot;https://www.tastingtable.com/food&quot;,</code>
+            <code class="ruby">        country: &quot;thailand&quot;,</code>
           </li>
         </div>
       
@@ -3995,7 +3984,7 @@
 
             
 
-            <code class="ruby">      recipe_title: nil</code>
+            <code class="ruby">        recipe_link: &quot;https://www.tastingtable.com/food&quot;,</code>
           </li>
         </div>
       
@@ -4006,7 +3995,7 @@
 
             
 
-            <code class="ruby">    })</code>
+            <code class="ruby">        recipe_title: nil</code>
           </li>
         </div>
       
@@ -4017,62 +4006,62 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby">      })</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="57">
+            
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="58">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    headers = {&quot;CONTENT_TYPE&quot; =&gt; &quot;application/json&quot;}</code>
+            <code class="ruby">      headers = {&quot;CONTENT_TYPE&quot; =&gt; &quot;application/json&quot;}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="59">
             
             
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby">      </code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="59">
+          <li class="covered" data-hits="1" data-linenumber="60">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    post &quot;/api/v1/favorites&quot;, headers: headers, params: JSON.generate(favorite_params)</code>
+            <code class="ruby">      post &quot;/api/v1/favorites&quot;, headers: headers, params: JSON.generate(favorite_params)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
             
 
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="61">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(response.status).to eq(409)</code>
+            <code class="ruby">      </code>
           </li>
         </div>
       
@@ -4083,18 +4072,18 @@
 
             
 
-            <code class="ruby">    expect(response.body).to eq(&quot;{\&quot;errors\&quot;:\&quot;missing data\&quot;}&quot;)</code>
+            <code class="ruby">      expect(response.status).to eq(409)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">      expect(response.body).to eq(&quot;{\&quot;errors\&quot;:\&quot;missing data\&quot;}&quot;)</code>
           </li>
         </div>
       
@@ -4105,29 +4094,29 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
             <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="65">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &quot;user can see their favorites&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="66">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    user = User.create!( name: &quot;Jason&quot;, email: &#39;dave@aol.com&#39;, password: &#39;Password12?&#39;, api_key: &#39;111222333&#39;)</code>
           </li>
         </div>
       
@@ -4138,7 +4127,7 @@
 
             
 
-            <code class="ruby">      fav1 = Favorite.create!(user: user, country: &quot;germany&quot;, recipe_link: &quot;https://www.tastingtable.com/&quot;, recipe_title: &quot;Yum&quot;, created_at: &quot;2022-11-02T02:17:54.111Z&quot;)</code>
+            <code class="ruby">  describe &quot;favorites#index&quot; do</code>
           </li>
         </div>
       
@@ -4149,18 +4138,18 @@
 
             
 
-            <code class="ruby">      fav2 = Favorite.create!(user: user, country: &quot;japan&quot;, recipe_link: &quot;https://www.othertastingtable.com/&quot;, recipe_title: &quot;Oishi&quot;, created_at: &quot;2022-11-02T02:17:54.111Z&quot;)</code>
+            <code class="ruby">    it &quot;user can see their favorites&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="69">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      user = User.create!( name: &quot;Jason&quot;, email: &#39;dave@aol.com&#39;, password: &#39;Password12?&#39;, api_key: &#39;111222333&#39;)</code>
           </li>
         </div>
       
@@ -4171,12 +4160,23 @@
 
             
 
-            <code class="ruby">    get &quot;/api/v1/favorites?api_key=111222333&quot;</code>
+            <code class="ruby">        fav1 = Favorite.create!(user: user, country: &quot;germany&quot;, recipe_link: &quot;https://www.tastingtable.com/&quot;, recipe_title: &quot;Yum&quot;, created_at: &quot;2022-11-02T02:17:54.111Z&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="covered" data-hits="1" data-linenumber="71">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        fav2 = Favorite.create!(user: user, country: &quot;japan&quot;, recipe_link: &quot;https://www.othertastingtable.com/&quot;, recipe_title: &quot;Oishi&quot;, created_at: &quot;2022-11-02T02:17:54.111Z&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
             
             
 
@@ -4187,18 +4187,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="72">
+          <li class="covered" data-hits="1" data-linenumber="73">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(response).to be_successful</code>
+            <code class="ruby">      get &quot;/api/v1/favorites?api_key=111222333&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="73">
+          <li class="never" data-hits="" data-linenumber="74">
             
             
 
@@ -4209,35 +4209,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="74">
+          <li class="covered" data-hits="1" data-linenumber="75">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    favorites = JSON.parse(response.body, symbolize_names: true)[:data]</code>
+            <code class="ruby">      expect(response).to be_successful</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="75">
+          <li class="never" data-hits="" data-linenumber="76">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="76">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(favorites[0][:id]).to be_a(String)</code>
           </li>
         </div>
       
@@ -4248,7 +4237,7 @@
 
             
 
-            <code class="ruby">    expect(favorites[0][:attributes]).to be_a(Hash)</code>
+            <code class="ruby">      favorites = JSON.parse(response.body, symbolize_names: true)[:data]</code>
           </li>
         </div>
       
@@ -4270,7 +4259,7 @@
 
             
 
-            <code class="ruby">    expect(favorites[0][:attributes][:recipe_title]).to eq(fav1.recipe_title)</code>
+            <code class="ruby">      expect(favorites[0][:id]).to be_a(String)</code>
           </li>
         </div>
       
@@ -4281,34 +4270,12 @@
 
             
 
-            <code class="ruby">    expect(favorites[0][:attributes][:recipe_link]).to eq(fav1.recipe_link)</code>
+            <code class="ruby">      expect(favorites[0][:attributes]).to be_a(Hash)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="81">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(favorites[0][:attributes][:country]).to eq(fav1.country)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="82">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(favorites[0][:attributes][:created_at].to_s).to eq(&quot;2022-11-02T02:17:54.111Z&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="83">
+          <li class="never" data-hits="" data-linenumber="81">
             
             
 
@@ -4319,13 +4286,35 @@
         </div>
       
         <div>
+          <li class="covered" data-hits="1" data-linenumber="82">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(favorites[0][:attributes][:recipe_title]).to eq(fav1.recipe_title)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="83">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(favorites[0][:attributes][:recipe_link]).to eq(fav1.recipe_link)</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="covered" data-hits="1" data-linenumber="84">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(favorites[1][:attributes][:recipe_title]).to eq(fav2.recipe_title)</code>
+            <code class="ruby">      expect(favorites[0][:attributes][:country]).to eq(fav1.country)</code>
           </li>
         </div>
       
@@ -4336,18 +4325,18 @@
 
             
 
-            <code class="ruby">    expect(favorites[1][:attributes][:recipe_link]).to eq(fav2.recipe_link)</code>
+            <code class="ruby">      expect(favorites[0][:attributes][:created_at].to_s).to eq(&quot;2022-11-02T02:17:54.111Z&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="86">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="86">
+            
             
 
             
 
-            <code class="ruby">    expect(favorites[1][:attributes][:country]).to eq(fav2.country)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4358,12 +4347,210 @@
 
             
 
-            <code class="ruby">    expect(favorites[1][:attributes][:created_at].to_s).to eq(&quot;2022-11-02T02:17:54.111Z&quot;)</code>
+            <code class="ruby">      expect(favorites[1][:attributes][:recipe_title]).to eq(fav2.recipe_title)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="88">
+          <li class="covered" data-hits="1" data-linenumber="88">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(favorites[1][:attributes][:recipe_link]).to eq(fav2.recipe_link)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="89">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(favorites[1][:attributes][:country]).to eq(fav2.country)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="90">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(favorites[1][:attributes][:created_at].to_s).to eq(&quot;2022-11-02T02:17:54.111Z&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="91">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="92">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="93">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &quot;user cannot see their favorites if their API key is bad&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="94">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      user = User.create!( name: &quot;Jason&quot;, email: &#39;dave@aol.com&#39;, password: &#39;Password12?&#39;, api_key: &#39;111222333&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="95">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        fav1 = Favorite.create!(user: user, country: &quot;germany&quot;, recipe_link: &quot;https://www.tastingtable.com/&quot;, recipe_title: &quot;Yum&quot;, created_at: &quot;2022-11-02T02:17:54.111Z&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="96">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        fav2 = Favorite.create!(user: user, country: &quot;japan&quot;, recipe_link: &quot;https://www.othertastingtable.com/&quot;, recipe_title: &quot;Oishi&quot;, created_at: &quot;2022-11-02T02:17:54.111Z&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="97">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="98">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      get &quot;/api/v1/favorites?api_key=3&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="99">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="100">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(response.status).to eq(409)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="101">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="102">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      favorites = JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="103">
+            
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="104">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(favorites).to eq({:errors=&gt;&quot;invalid API key&quot;})</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="105">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="106">
             
             
 
@@ -4374,7 +4561,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="89">
+          <li class="never" data-hits="" data-linenumber="107">
             
             
 
