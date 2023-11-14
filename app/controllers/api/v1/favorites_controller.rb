@@ -10,11 +10,11 @@ class Api::V1::FavoritesController < ApplicationController
     end
   end
 
-  private
-
-  def favorite_params
-    params.permit(:country, :recipe_link, :recipe_title) 
+  def index
+    render FavoriteFacade.index(params[:api_key])
   end
+
+  private
 
   def error_response(errors)
     if errors.messages.keys.include? (:user)

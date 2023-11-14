@@ -46,19 +46,44 @@ describe "Favoritess requests" do
 
   it "users cannot create favorite with invalid API key" do
     user = User.create!( name: "Jason", email: 'dave@aol.com', password: 'Password12?', api_key: '111222333')
-
+    
     favorite_params = ({
       api_key: "111222333",
       country: "thailand",
       recipe_link: "https://www.tastingtable.com/food",
       recipe_title: nil
     })
-
+    
     headers = {"CONTENT_TYPE" => "application/json"}
-
+    
     post "/api/v1/favorites", headers: headers, params: JSON.generate(favorite_params)
-
+    
     expect(response.status).to eq(409)
     expect(response.body).to eq("{\"errors\":\"missing data\"}")
+  end
+  
+  it "user can see their favorites" do
+    user = User.create!( name: "Jason", email: 'dave@aol.com', password: 'Password12?', api_key: '111222333')
+      fav1 = Favorite.create!(user: user, country: "germany", recipe_link: "https://www.tastingtable.com/", recipe_title: "Yum", created_at: "2022-11-02T02:17:54.111Z")
+      fav2 = Favorite.create!(user: user, country: "japan", recipe_link: "https://www.othertastingtable.com/", recipe_title: "Oishi", created_at: "2022-11-02T02:17:54.111Z")
+
+    get "/api/v1/favorites?api_key=111222333"
+
+    expect(response).to be_successful
+
+    favorites = JSON.parse(response.body, symbolize_names: true)[:data]
+
+    expect(favorites[0][:id]).to be_a(String)
+    expect(favorites[0][:attributes]).to be_a(Hash)
+
+    expect(favorites[0][:attributes][:recipe_title]).to eq(fav1.recipe_title)
+    expect(favorites[0][:attributes][:recipe_link]).to eq(fav1.recipe_link)
+    expect(favorites[0][:attributes][:country]).to eq(fav1.country)
+    expect(favorites[0][:attributes][:created_at].to_s).to eq("2022-11-02T02:17:54.111Z")
+
+    expect(favorites[1][:attributes][:recipe_title]).to eq(fav2.recipe_title)
+    expect(favorites[1][:attributes][:recipe_link]).to eq(fav2.recipe_link)
+    expect(favorites[1][:attributes][:country]).to eq(fav2.country)
+    expect(favorites[1][:attributes][:created_at].to_s).to eq("2022-11-02T02:17:54.111Z")
   end
 end
