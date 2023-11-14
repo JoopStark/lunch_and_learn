@@ -16,7 +16,7 @@ describe VideoService do
   context 'class methods' do
     describe '#video' do
       it 'returns a video', :vcr do
-        make_api_request
+        # make_api_request
 
         video_data = @video.video("germany")
 

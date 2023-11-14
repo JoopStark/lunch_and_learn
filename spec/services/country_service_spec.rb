@@ -16,7 +16,7 @@ describe CountryService do
   context 'class methods' do
     describe '#country' do
       it 'returns random country', :vcr do
-        # make_api_request
+        make_api_request
 
         country = @country.country
 
@@ -26,7 +26,7 @@ describe CountryService do
 
     describe '#capitol_location' do
       it 'returns location of capitol', :vcr do
-        make_api_request
+        # make_api_request
 
         capitol = @country.capitol_location("Latvia")
 
