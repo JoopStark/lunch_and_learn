@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: true
 
+  has_many :favorites
 
   def generate_api_key
     unless self.api_key
