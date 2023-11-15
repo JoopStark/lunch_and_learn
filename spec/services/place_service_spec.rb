@@ -11,7 +11,7 @@ describe PlaceService do
         expect(@service.conn).to be_a Faraday::Connection
       end
     end
-  end
+  
 
     describe '#tourism' do
       it 'expect to return tourism data', :vcr do
