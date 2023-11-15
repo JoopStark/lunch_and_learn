@@ -13,21 +13,6 @@ describe PlaceService do
     end
   end
 
-  context 'class methods' do
-    xdescribe '#test' do
-      it 'expect test to return data', :vcr do
-        # make_api_request
-
-        restaurants = @service.test
-
-        # binding.pry
-        expect(restaurants).to be_a Hash
-        expect(restaurants[:type]).to be_a String
-      end
-    end
-  
-
-
     describe '#tourism' do
       it 'expect to return tourism data', :vcr do
         # make_api_request
